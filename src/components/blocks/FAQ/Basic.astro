@@ -1,0 +1,95 @@
+---
+// FAQ.astro
+// Basic FAQ section for StudyFlow
+// ------------
+// Description: A section that contains frequently asked questions about the study platform features and usage.
+
+// Components
+// - Layout
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+// - UI
+import Accordion from '../../ui/Accordion.astro'
+import Card from '../../ui/cards/partials/Card.astro'
+
+// Props
+type Props = {
+  classes?: string
+}
+
+const { classes } = Astro.props
+---
+
+<Section id="FAQ" classes={classes}>
+  <Row>
+    <Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+      <h2 class="text-pretty">
+        Common <strong class="text-gradient-primary">questions</strong> about Kiasoftwares
+      </h2>
+      <p class="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">
+        Discover how our expert freelance developers can revolutionize your project experience. Here are answers to questions we frequently receive from our clients
+      </p>
+    </Col>
+    <Col span="2" />
+    <Col span="8">
+      <Card classes="divide-y divide-neutral-100 dark:divide-neutral-800 shadow-xl rounded-2xl">
+        <Accordion
+          title="How does Kiasoftwares work, and how are we different from other agencies ?"
+          text="We are a team of freelance developers, not an agency. Once you start a project with us, a dedicated developer is assigned to work with you throughout the project lifecycle. We also provide non-technical support, and 90% of the project cost goes directly to the developer."
+        />
+        <Accordion
+          title="Will I have a dedicated developer for my project?"
+          text="Yes! Each project is assigned a dedicated freelance developer who will work with you from development to deployment, ensuring consistency and quality."
+        />
+        <Accordion
+          title="Do you provide support beyond development?"
+          text="Absolutely! Along with your developer, our non-technical support team is available to assist with any coordination and communication needs. Additionally, post-development, we can either transfer full code ownership or manage the deployment and maintenance for you."
+        />
+        <Accordion
+          title="How is the pricing of the project calculated"
+          text="Our project pricing is based on development complexity and additional services like deployment and maintenance. We don't charge hourly; instead, we provide a fixed price for the entire project after understanding your requirements. The agreed price remains the same unless the client requests significant changes beyond the original scope."
+        />
+        <Accordion
+          title="How is the pricing of the project calculated"
+          text="Our project pricing is based on development complexity and additional services like deployment and maintenance. We don't charge hourly; instead, we provide a fixed price for the entire project after understanding your requirements. The agreed price remains the same unless the client requests significant changes beyond the original scope."
+        />
+          <Accordion
+          title="How is the project duration or timeline calculated"
+          text="Before finalizing the price, we provide you with a detailed timeline outlining each project phase. We strive to complete the project within the agreed timeframe, provided there are no major changes from the client’s side. If we fail to meet the deadline, we do not penalize our developers. Instead, as a gesture of goodwill, we offer additional features for your project at no extra cost."
+        />
+                  <Accordion
+          title="How can I trust you?"
+          text="Before starting the project, we sign a digital contract that clearly outlines all terms, including pricing and milestones. The pricing is milestone-based, as defined in the contract, which we finalize together. Additionally, you can review our previous projects to understand the quality and standards of our work."
+        />
+                          <Accordion
+          title="What if you couldn't deliver the project?"
+          text="So far, we have never failed to deliver a project. If, at any point, our freelance developer faces challenges, we will assign an additional support team to ensure timely completion. In the rare event that we are still unable to deliver, we will issue a full refund of the project amount"
+        />
+                                  <Accordion
+          title="Can my projects remain confidential, and will you sign an NDA?"
+          text="Absolutely! We prioritize your project's confidentiality. If you wish, we can sign a Non-Disclosure Agreement (NDA) to ensure complete privacy and maintain secrecy throughout our collaboration"
+        />
+      </Card>
+    </Col>
+    <Col span="2" />
+  </Row>
+</Section>
+
+<style>
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400;
+  }
+  
+  .page-header {
+    @apply mx-auto max-w-3xl;
+  }
+  
+  .page-header__text {
+    @apply text-lg leading-relaxed;
+  }
+  
+  :global(.dark) .text-gradient-primary {
+    @apply from-blue-400 to-indigo-400;
+  }
+</style>
