@@ -1,8 +1,6 @@
 ---
 // Components
-// - Layout
 import Layout from '../layouts/Layout.astro'
-// - UI
 import Hero from '../components/blocks/hero/PageHeader.astro'
 import FAQ from '../components/blocks/FAQ/FaqSticky.astro'
 import TextImage from '../components/blocks/basic/TextImage.astro'
@@ -18,37 +16,37 @@ const faqIntegrations = faqData.filter((faq) => faq.category === 'integrations')
 import faqImage1 from '../assets/faq/faq-01.png'
 // - SEO
 const SEO = {
-	title: 'kiasoftwares | Get Your Questions Answered with a Smile',
-	description:
-		'Dive into the kiasoftwares FAQ Funhouse to get answers to all your questions about pricing, integrations, features, and more. Discover how kiasoftwares can make your work life more productive and enjoyable.'
+    title: 'KIA Softwares | AI Agent Platform FAQ',
+    description:
+        'Get answers to common questions about KIA Softwares AI agent platform. Learn about deploying AI agents, integration capabilities, pricing plans, and how our platform can transform your business operations.'
 }
 // - Page Header
 const header = {
-	title: 'Get Answers to Your <strong>kiasoftwares</strong> Questions.',
-	text: 'Find answers to common questions about kiasoftwares '
+    title: 'Everything You Need to Know About <strong>AI Agents</strong>',
+    text: 'Find answers to common questions about building and deploying AI agents with KIA Softwares'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero title={header.title} text={header.text} />
-	<FAQ
-		title="Understanding Our Pricing Plans"
-		text="Get all the details on kiasoftwares’s pricing plans. Learn about the costs, discounts, and subscription options to find the best plan that fits your needs and budget."
-		data={faqPricing}
-	/>
-	<TextImage
-		title="Why kiasoftwares’s Pricing Plans Offer Great Value"
-		text="At kiasoftwares, we believe in providing exceptional value at every price point. Our pricing plans are designed to cater to a variety of needs, from individuals and small teams to large enterprises. Each plan includes access to our powerful features, seamless integrations, and top-notch customer support. "
-		image={faqImage1}
-		mobileImage={faqImage1}
-		imagePosition="left"
-		offsetImage
-		classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
-	/>
-	<FAQ
-		title="Integrations Made Easy"
-		text="Discover how kiasoftwares seamlessly integrates with your favorite tools and platforms. From Google Calendar to Slack, find out how to connect and enhance your productivity with powerful integrations."
-		data={faqIntegrations}
-	/>
-	<CTA />
+    <Hero title={header.title} text={header.text} />
+    <FAQ
+        title="Understanding Our AI Agent Plans"
+        text="Learn about our AI agent deployment plans, pricing structure, and how to choose the right solution for your business needs."
+        data={faqPricing}
+    />
+    <TextImage
+        title="Why Choose KIA Softwares for AI Agents"
+        text="Our platform offers enterprise-grade AI agent deployment capabilities with unmatched reliability and scalability. From simple task automation to complex workflow management, our AI agents are designed to transform how businesses operate. Each plan includes advanced monitoring tools, seamless integration capabilities, and 24/7 technical support."
+        image={faqImage1}
+        mobileImage={faqImage1}
+        imagePosition="left"
+        offsetImage
+        classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
+    />
+    <FAQ
+        title="AI Agent Integrations"
+        text="Discover how KIA Softwares AI agents integrate with your existing tech stack. From data processing tools to communication platforms, learn how our agents can enhance your workflow automation."
+        data={faqIntegrations}
+    />
+    <CTA />
 </Layout>
